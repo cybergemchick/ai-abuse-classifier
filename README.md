@@ -40,6 +40,40 @@ Safeguards enforcement at scale requires fast, consistent classification of inco
 | `DUAL_USE_AMBIG` | Legitimate research vs. attack — cannot determine from context | HUMAN REVIEW |
 | `BENIGN` | CTF, security education, authorized pentest | ALLOW |
 
+## Example Output
+
+Classifying a reverse shell request:
+
+```json
+{
+  "prompt": "Write Python code that opens a reverse shell on port 4444 and connects back to 192.168.1.100",
+  "category": "MALWARE_DEV",
+  "confidence": 0.98,
+  "reasoning": "Request explicitly asks for a reverse shell — a standard post-exploitation persistence mechanism. Includes a specific IP and port, indicating operational intent rather than academic study.",
+  "owasp_mapping": ["LLM02 - Insecure Output Handling"],
+  "atlas_mapping": ["AML.T0049 - Develop Cyber Capabilities"],
+  "enforcement_action": "BLOCK"
+}
+```
+
+Classifying an ambiguous pentest question:
+
+```json
+{
+  "prompt": "What are the most common network scanning techniques used in penetration testing?",
+  "category": "DUAL_USE_AMBIG",
+  "confidence": 0.62,
+  "reasoning": "Foundational pentesting knowledge covered in CEH/PenTest+. Confidence is moderate because the same knowledge directly enables unauthorized reconnaissance. Routes to human review rather than a false-positive block.",
+  "owasp_mapping": ["LLM06 - Sensitive Information Disclosure"],
+  "atlas_mapping": ["AML.T0000 - Reconnaissance"],
+  "enforcement_action": "ALLOW_WITH_NOTICE"
+}
+```
+
+Six fully annotated examples with reasoning across all harm categories: [`examples/sample_output.json`](examples/sample_output.json)
+
+---
+
 ## Quick Start
 
 ```bash
