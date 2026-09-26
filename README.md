@@ -140,4 +140,4 @@ Add harm categories in `classifier.py` by extending:
 - [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [MITRE ATLAS](https://atlas.mitre.org/)
 - [NIST AI Risk Management Framework](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
-- [Anthropic Usage Policy](https://www.anthropic.com/legal/usage-policy)
+- [Anthropic Usage Policy](https://www.anthropic.com/legal/aup)
