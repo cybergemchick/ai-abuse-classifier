@@ -1,7 +1,7 @@
 {
   "note": "Illustrative examples. The category, confidence and reasoning were written by hand to show the output schema; they were not captured from a live model run. Enforcement action and framework IDs come from the mappings in classifier.py.",
   "frameworks": {
-    "OWASP LLM Top 10": "v1.1 (2023)",
+    "OWASP LLM Top 10": "2025",
     "MITRE ATLAS": "v5.6.0",
     "MITRE ATT&CK Enterprise": "v19.2"
   },

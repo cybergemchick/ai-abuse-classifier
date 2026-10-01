@@ -5,7 +5,7 @@ Classifies prompts/conversations for potential misuse of AI systems to facilitat
 cyber operations: malware development, exploitation, attack planning, and policy bypass.
 
 Designed to demonstrate the detection logic behind AI safeguards enforcement.
-Maps findings to OWASP LLM Top 10 (v1.1), MITRE ATLAS and MITRE ATT&CK.
+Maps findings to OWASP LLM Top 10 (2025), MITRE ATLAS and MITRE ATT&CK.
 
 Author: CyberGemChick | AI Red Team
 """
@@ -44,7 +44,7 @@ HARM_DESCRIPTIONS = {
 
 # Framework versions the IDs below were checked against.
 FRAMEWORK_VERSIONS = {
-    "OWASP LLM Top 10": "v1.1 (2023)",
+    "OWASP LLM Top 10": "2025",
     "MITRE ATLAS": "v5.6.0",
     "MITRE ATT&CK Enterprise": "v19.2",
 }

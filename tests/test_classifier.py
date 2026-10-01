@@ -76,6 +76,10 @@ class TestTaxonomy:
         assert ATTACK_MAPPING[HarmCategory.EXPLOIT_DEV] == ["T1587.004"]
         assert ATTACK_MAPPING[HarmCategory.CREDENTIAL_THEFT] == ["T1566"]
 
+    def test_owasp_edition_and_name(self):
+        assert c.FRAMEWORK_VERSIONS["OWASP LLM Top 10"] == "2025"
+        assert FRAMEWORK_NAMES["LLM01"] == "Prompt Injection"
+
     def test_framework_versions_present(self):
         assert set(c.FRAMEWORK_VERSIONS) == {"OWASP LLM Top 10", "MITRE ATLAS", "MITRE ATT&CK Enterprise"}
 

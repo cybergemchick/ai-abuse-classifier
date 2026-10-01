@@ -39,7 +39,7 @@ Seven annotated examples covering every category: [`examples/sample_output.json`
 
 ## Framework mappings
 
-Checked against OWASP LLM Top 10 v1.1 (2023), MITRE ATLAS v5.6.0 and MITRE ATT&CK Enterprise v19.2. The mapping logic is deliberate:
+Checked against OWASP LLM Top 10 2025, MITRE ATLAS v5.6.0 and MITRE ATT&CK Enterprise v19.2. The mapping logic is deliberate:
 
 - **OWASP and ATLAS describe attacks on AI systems.** Only `POLICY_BYPASS` fits: LLM01 Prompt Injection, AML.T0051 LLM Prompt Injection and AML.T0054 LLM Jailbreak.
 - **ATT&CK describes the adversary behavior a request would enable**: `MALWARE_DEV` T1587.001 (Malware), `EXPLOIT_DEV` T1587.004 (Exploits), `CREDENTIAL_THEFT` T1566 (Phishing), `RECON_TARGETING` T1595, T1589 and T1590.
@@ -108,7 +108,7 @@ pytest -m slow      # live tests, need ANTHROPIC_API_KEY
 
 ## References
 
-- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)
 - [MITRE ATLAS](https://atlas.mitre.org/)
 - [MITRE ATT&CK](https://attack.mitre.org/)
 - [Anthropic Usage Policy](https://www.anthropic.com/legal/aup)
